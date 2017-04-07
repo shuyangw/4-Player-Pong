@@ -6,7 +6,7 @@ sio.configure(function(){
 	});
 });
 
-//Canns on client connection
+//Runs on client connection
 sio.sockets.on('connection', function(client){
 	client.userid = UUID();
 	client.emit('onconnected', {id: client.userid});
