@@ -1,6 +1,17 @@
 var c = document.getElementById("Canvas");
-var draw = c.getContext("2d");
+var ctx = c.getContext("2d");
+ctx.strokeStyle = "White"
 
-draw.moveTo(0,0);
-draw.lineTo(200,100);
-draw.stroke();
+function rect(){
+	ctx.rect(20,20,150,100);
+}
+
+function line(){
+	ctx.moveTo(0,0);
+	ctx.lineTo(200,100);
+}
+
+rect();
+line();
+
+ctx.stroke();
